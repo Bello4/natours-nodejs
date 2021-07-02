@@ -11,8 +11,9 @@ dotenv.config({ path: './config.env'});
 const app = require('./app');
 //console.log(process.env);
 //NwXXceTgWuhg9K5G
-const DB = process.env.DATABASE.replace('<PASSWORD>', process.env.DATABASE_PASSWORD);
-
+//const DB = process.env.DATABASE.replace('<PASSWORD>', process.env.DATABASE_PASSWORD);
+const PASSWORD = process.env.DATABASE_PASSWORD
+const DB = 'mongodb+srv://bello:<PASSWORD>@cluster0.qon07.mongodb.net/natours?retryWrites=true&w=majority';
 mongoose.connect(DB, {
 //mongoose.connect(process.env.DATABASE_LOCAL, {
     useNewUrlParser: true,
